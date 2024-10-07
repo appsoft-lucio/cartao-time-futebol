@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Define o estilo global, removendo margens e preenchimentos e usando box-sizing para incluir bordas e preenchimento nas larguras e alturas */
+
+:root {
+  --dark-grey: #0a0a23;
+  --light-grey: #f5f6f7;
+  --white: #ffffff;
+  --black: #000;
+}
+/* Define variáveis de cores globais para reutilização */
+
+body {
+  background-color: var(--dark-grey);
+  text-align: center;
+  padding: 10px;
+}
+/* Estilo do corpo da página, com fundo escuro e centralização do texto */
+
+.title,
+.options-label,
+.team-stats,
+footer {
+  color: var(--white);
+}
+/* Define a cor do texto para branco em diversos elementos */
+
+.title {
+  margin: 1.3rem 0;
+}
+/* Estilo para o título principal, adicionando margem */
+
+.team-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+}
+/* Estilo para a div com as estatísticas da equipe, com layout flexível e espaçamento */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* Container flexível para as cartas dos jogadores */
+
+.player-card {
+  background-color: var(--light-grey);
+  padding: 1.3rem;
+  margin: 1.2rem;
+  width: 300px;
+  border-radius: 15px;
+}
+/* Estilo individual de cada carta de jogador, com fundo claro, espaçamento e cantos arredondados */
+
+@media (max-width: 768px) {
+  .team-stats {
+    flex-direction: column;
+  }
+}
+/* Responsividade: em telas menores, as estatísticas da equipe são exibidas em uma coluna */
