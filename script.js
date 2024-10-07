@@ -1,27 +1,40 @@
+// Seleciona o elemento do DOM com o ID 'team' onde será exibido o nome do time
 const teamName = document.getElementById("team");
-const typeOfSport = document.getElementById("sport");
-const worldCupYear = document.getElementById("year");
-const headCoach = document.getElementById("head-coach");
-const playerCards = document.getElementById("player-cards");
-const playersDropdownList = document.getElementById("players");
-/* Seleciona elementos HTML que serão preenchidos ou manipulados dinamicamente */
 
+// Seleciona o elemento do DOM com o ID 'sport' onde será exibido o tipo de esporte
+const typeOfSport = document.getElementById("sport");
+
+// Seleciona o elemento do DOM com o ID 'year' onde será exibido o ano da Copa do Mundo
+const worldCupYear = document.getElementById("year");
+
+// Seleciona o elemento do DOM com o ID 'head-coach' onde será exibido o nome do técnico
+const headCoach = document.getElementById("head-coach");
+
+// Seleciona o elemento do DOM onde os cartões dos jogadores serão exibidos
+const playerCards = document.getElementById("player-cards");
+
+// Seleciona o elemento do DOM com o ID 'players' que contém a lista suspensa de jogadores
+const playersDropdownList = document.getElementById("players");
+
+// Define um objeto que representa o time de futebol favorito
 const myFavoriteFutebolTeam = {
-  team: "Argentina",
-  sport: "Futebol",
-  year: 1986,
-  isWorldCupWinner: true,
+  team: "Argentina", // Nome do time
+  sport: "Futebol", // Tipo de esporte
+  year: 1986, // Ano da Copa do Mundo
+  isWorldCupWinner: true, // Indica se o time é campeão da Copa do Mundo
   headCoach: {
-    coachName: "Carlos Bilardo",
-    matches: 7,
+    // Objeto que contém informações sobre o técnico
+    coachName: "Carlos Bilardo", // Nome do técnico
+    matches: 7, // Número de partidas dirigidas
   },
   players: [
+    // Lista de jogadores do time
     {
-      name: "Sergio Almirón",
-      Posição: "Atacante",
-      Número: 1,
-      isCaptain: false,
-      Apelido: null,
+      name: "Sergio Almirón", // Nome do jogador
+      Posição: "Atacante", // Posição do jogador
+      Número: 1, // Número da camisa do jogador
+      isCaptain: false, // Indica se o jogador é capitão
+      Apelido: null, // Apelido do jogador (pode ser nulo)
     },
     {
       name: "Sergio Batista",
@@ -37,54 +50,210 @@ const myFavoriteFutebolTeam = {
       isCaptain: false,
       Apelido: "El Bocha",
     },
-    /* ... Mais jogadores listados aqui ... */
+    {
+      name: "Claudio Borghi",
+      Posição: "Meio-campo",
+      Número: 4,
+      isCaptain: false,
+      Apelido: "Bichi",
+    },
+    {
+      name: "José Luis Brown",
+      Posição: "Zagueiro",
+      Número: 5,
+      isCaptain: false,
+      Apelido: "Tata",
+    },
+    {
+      name: "Daniel Passarella",
+      Posição: "Zagueiro",
+      Número: 6,
+      isCaptain: false,
+      Apelido: "El Gran Capitán",
+    },
+    {
+      name: "Jorge Burruchaga",
+      Posição: "Atacante",
+      Número: 7,
+      isCaptain: false,
+      Apelido: "Burru",
+    },
+    {
+      name: "Néstor Clausen",
+      Posição: "Zagueiro",
+      Número: 8,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "José Luis Cuciuffo",
+      Posição: "Zagueiro",
+      Número: 9,
+      isCaptain: false,
+      Apelido: "El Cuchu",
+    },
+    {
+      name: "Diego Maradona",
+      Posição: "Meio-campo",
+      Número: 10,
+      isCaptain: true, // Diego Maradona é o capitão
+      Apelido: "El Pibe de Oro",
+    },
+    {
+      name: "Jorge Valdano",
+      Posição: "Atacante",
+      Número: 11,
+      isCaptain: false,
+      Apelido: "The Philosopher of Futebol",
+    },
+    {
+      name: "Héctor Enrique",
+      Posição: "Meio-campo",
+      Número: 12,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Oscar Garré",
+      Posição: "Zagueiro",
+      Número: 13,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Ricardo Giusti",
+      Posição: "Meio-campo",
+      Número: 14,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Luis Islas",
+      Posição: "Goleiro",
+      Número: 15,
+      isCaptain: false,
+      Apelido: "El loco",
+    },
+    {
+      name: "Julio Olarticoechea",
+      Posição: "Zagueiro",
+      Número: 16,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Pedro Pasculli",
+      Posição: "Atacante",
+      Número: 17,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Nery Pumpido",
+      Posição: "Goleiro",
+      Número: 18,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Oscar Ruggeri",
+      Posição: "Zagueiro",
+      Número: 19,
+      isCaptain: false,
+      Apelido: "El Cabezón",
+    },
+    {
+      name: "Carlos Tapia",
+      Posição: "Meio-campo",
+      Número: 20,
+      isCaptain: false,
+      Apelido: null,
+    },
+    {
+      name: "Marcelo Trobbiani",
+      Posição: "Meio-campo",
+      Número: 21,
+      isCaptain: false,
+      Apelido: "Calesita",
+    },
+    {
+      name: "Héctor Zelada",
+      Posição: "Goleiro",
+      Número: 22,
+      isCaptain: false,
+      Apelido: null,
+    },
   ],
 };
-/* Objeto que armazena as informações do time e dos jogadores */
 
+// Congela o objeto myFavoriteFutebolTeam para impedir modificações
 Object.freeze(myFavoriteFutebolTeam);
-/* Impede que o objeto seja modificado */
 
+// Desestrutura os dados do time e do técnico do objeto myFavoriteFutebolTeam
 const { sport, team, year, players } = myFavoriteFutebolTeam;
 const { coachName } = myFavoriteFutebolTeam.headCoach;
-/* Desestruturação do objeto para acessar valores específicos */
 
-typeOfSport.textContent = sport;
-teamName.textContent = team;
-worldCupYear.textContent = year;
-headCoach.textContent = coachName;
-/* Preenche os campos de estatísticas do time no HTML */
+// Atualiza o conteúdo dos elementos HTML com os dados do time
+typeOfSport.textContent = sport; // Define o tipo de esporte
+teamName.textContent = team; // Define o nome do time
+worldCupYear.textContent = year; // Define o ano da Copa do Mundo
+headCoach.textContent = coachName; // Define o nome do técnico
 
+// Função para definir os cartões dos jogadores
 const setPlayerCards = (arr = players) => {
+  // Adiciona os cartões dos jogadores ao elemento playerCards
   playerCards.innerHTML += arr
     .map(
+      // Mapeia os jogadores para criar os cartões
       ({ name, Posição, Número, isCaptain, Apelido }) =>
         `
-        <div class="player-card">
-          <h2>${name} ${isCaptain ? "(Captain)" : ""}</h2>
-          <p>Posição: ${Posição}</p>
-          <p>Número: ${Número}</p>
-          <p>Apelido: ${Apelido !== null ? Apelido : "N/A"}</p>
+        <div class="player-card"> <!-- Cria um cartão para cada jogador -->
+          <h2>${name} ${
+          isCaptain ? "(Captain)" : ""
+        }</h2> <!-- Exibe o nome do jogador e se é capitão -->
+          <p>Posição: ${Posição}</p> <!-- Exibe a posição do jogador -->
+          <p>Número: ${Número}</p> <!-- Exibe o número da camisa do jogador -->
+          <p>Apelido: ${
+            Apelido !== null ? Apelido : "N/A"
+          }</p> <!-- Exibe o apelido do jogador, ou "N/A" se não houver -->
         </div>
       `
     )
-    .join("");
+    .join(""); // Junta todos os cartões em uma string
 };
-/* Função que cria dinamicamente as cartas de jogador com base em um array de jogadores */
 
+// Adiciona um ouvinte de eventos para quando a lista de jogadores for alterada
 playersDropdownList.addEventListener("change", (e) => {
-  playerCards.innerHTML = "";
+  playerCards.innerHTML = ""; // Limpa os cartões existentes
+
+  // Filtra os jogadores com base na opção selecionada na lista suspensa
   switch (e.target.value) {
     case "Apelido":
+      // Exibe apenas jogadores com apelido
       setPlayerCards(players.filter((player) => player.Apelido !== null));
       break;
     case "Atacante":
+      // Exibe apenas jogadores que são atacantes
       setPlayerCards(players.filter((player) => player.Posição === "Atacante"));
       break;
-    /* ... Outras opções de filtro ... */
+    case "Meio-campo":
+      // Exibe apenas jogadores que são meio-campistas
+      setPlayerCards(
+        players.filter((player) => player.Posição === "Meio-campo")
+      );
+      break;
+    case "Zagueiro":
+      // Exibe apenas jogadores que são zagueiros
+      setPlayerCards(players.filter((player) => player.Posição === "Zagueiro"));
+      break;
+    case "Goleiro":
+      // Exibe apenas jogadores que são goleiros
+      setPlayerCards(players.filter((player) => player.Posição === "Goleiro"));
+      break;
+
     default:
+      // Exibe todos os jogadores se nenhuma opção corresponder
       setPlayerCards();
       break;
   }
 });
-/* Adiciona um ouvinte de evento para o menu suspenso de filtro de jogadores, atualizando as cartas com base no critério selecionado */
