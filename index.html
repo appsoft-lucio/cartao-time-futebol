@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <!-- Define o tipo de documento como HTML5 e especifica o idioma como português do Brasil -->
+  <!-- Definindo o tipo de documento como HTML5 e o idioma como português do Brasil -->
 
   <head>
     <meta charset="UTF-8" />
-    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <!-- Define a codificação de caracteres como UTF-8, essencial para suportar caracteres especiais -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Garante compatibilidade com versões antigas do Internet Explorer -->
+    <!-- Garante que o site seja renderizado corretamente no Internet Explorer usando o modo mais recente disponível -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Define as regras para a exibição em dispositivos móveis, ajustando a escala -->
+    <!-- Define que a largura da página se ajuste ao tamanho da tela do dispositivo, essencial para sites responsivos -->
 
     <title>
       Aprenda métodos modernos de JavaScript construindo cartões de times de
       futebol
     </title>
-    <!-- Título da página que aparece na aba do navegador -->
+    <!-- Define o título da página que aparecerá na aba do navegador -->
 
     <link
       rel="shortcut icon"
@@ -26,50 +26,62 @@
     <!-- Define o ícone que aparecerá na aba do navegador (favicon) -->
 
     <link rel="stylesheet" href="styles.css" />
-    <!-- Link para o arquivo CSS externo para estilização -->
+    <!-- Faz referência ao arquivo de estilo externo (CSS) -->
   </head>
 
   <body>
     <h1 class="title">Estatísticas da equipe</h1>
-    <!-- Título principal da página -->
+    <!-- Título principal da página com a classe 'title' para estilização -->
 
     <main>
-      <!-- Conteúdo principal da página -->
+      <!-- Elemento principal que contém o conteúdo mais relevante da página -->
 
       <div class="team-stats">
-        <!-- Div para exibir informações do time -->
+        <!-- Div que contém as estatísticas da equipe -->
 
         <p>Time: <span id="team"></span></p>
-        <!-- Informação sobre o time, preenchida via JavaScript -->
+        <!-- Parágrafo exibindo o nome do time com um span onde será injetado o valor dinamicamente -->
 
         <p>Esporte: <span id="sport"></span></p>
-        <!-- Informação sobre o esporte, preenchida via JavaScript -->
+        <!-- Parágrafo exibindo o nome do esporte com um span onde será injetado o valor dinamicamente -->
 
         <p>Ano: <span id="year"></span></p>
-        <!-- Informação sobre o ano, preenchida via JavaScript -->
+        <!-- Parágrafo exibindo o ano com um span onde será injetado o valor dinamicamente -->
 
         <p>Treinador principal: <span id="head-coach"></span></p>
-        <!-- Informação sobre o treinador principal, preenchida via JavaScript -->
+        <!-- Parágrafo exibindo o nome do treinador com um span onde será injetado o valor dinamicamente -->
       </div>
 
       <label class="options-label" for="players">
+        <!-- Rótulo para o seletor de jogadores, associando o label ao select com o atributo 'for' -->
         Filtrar jogadores de equipe:
       </label>
-      <!-- Rótulo para o seletor de filtro de jogadores -->
 
       <select name="players" id="players">
-        <!-- Menu suspenso para filtrar jogadores com base em critérios específicos -->
+        <!-- Campo de seleção para filtrar os jogadores da equipe -->
 
         <option value="all">Todos os Jogadores</option>
+        <!-- Opção para mostrar todos os jogadores -->
+
         <option value="Apelido">Apelidos</option>
+        <!-- Opção para filtrar jogadores com apelidos -->
+
         <option value="Atacante">Posição Atacante</option>
+        <!-- Opção para filtrar jogadores da posição Atacante -->
+
         <option value="Meio-campo">Posição Meio-campo</option>
+        <!-- Opção para filtrar jogadores da posição Meio-campo -->
+
         <option value="Zagueiro">Posição Zagueiro</option>
+        <!-- Opção para filtrar jogadores da posição Zagueiro -->
+
         <option value="Goleiro">Posição Goleiro</option>
+        <!-- Opção para filtrar jogadores da posição Goleiro -->
       </select>
 
       <div class="cards" id="player-cards">
-        <!-- Container para as cartas dos jogadores, que será preenchido dinamicamente -->
+        <!-- Container que armazena os cartões individuais dos jogadores -->
+
         <div class="player-card">
           <h2>Sergio Almirón</h2>
           <p>Posição: Atacante</p>
@@ -188,27 +200,15 @@
           <h2>Carlos Tapia</h2>
           <p>Posição: Meio-campo</p>
           <p>Número: 20</p>
-          <p>Apelido: N/A</p>
-        </div>
-        <div class="player-card">
-          <h2>Marcelo Trobbiani</h2>
-          <p>Posição: Meio-campo</p>
-          <p>Número: 21</p>
-          <p>Apelido: Calesita</p>
-        </div>
-        <div class="player-card">
-          <h2>Héctor Zelada</h2>
-          <p>Posição: Goleiro</p>
-          <p>Número: 22</p>
-          <p>Apelido: N/A</p>
+          <p>Apelido: El Chino</p>
         </div>
       </div>
     </main>
 
     <footer>&copy; Lúcio Júnior</footer>
-    <!-- Rodapé da página com direitos autorais -->
+    <!-- Rodapé da página com o símbolo de copyright e o nome do autor -->
 
     <script src="./script.js"></script>
-    <!-- Inclusão do arquivo JavaScript externo -->
+    <!-- Inclusão do arquivo JavaScript externo que provavelmente gerencia a interação dinâmica da página -->
   </body>
 </html>
